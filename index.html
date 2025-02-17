@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=DynaPuff:wght@400..700&family=Gorditas:wght@400;700&family=Jersey+15&family=Playwrite+AU+SA:wght@100..400&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- mystyle -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>MerinTea.com</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <a class="navbar-logo">Merin<span>Tea.</span></a>
+      <div class="navbar-nav">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="./html/menu.html#menu">Menu</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="navbar-extra">
+        <button id="cart"><i data-feather="shopping-cart"></i></button>
+        <button id="burger"><i data-feather="menu"></i></button>
+      </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- hero -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>
+          Saat Kamu Merintih, Tenangkan dengan Minum "Merin<span>Tea</span>"
+        </h1>
+
+        <p>"Website yang menyediakan berbagai jenis tea"</p>
+
+        <a href="./menu.html#menu" class="cta">Order Now!!</a>
+      </main>
+    </section>
+    <!-- hero end -->
+    <!-- about start -->
+    <section id="about" class="about">
+      <h2><span>&lt;&lt; Tentang</span> Kami &gt;&gt;</h2>
+      <div class="row">
+        <div class="about-img">
+          <img src="./assets/img/maskot/maskottea.png" alt="maskot merintea" />
+        </div>
+        <div class="content">
+          <h3>Kenapa memilih teh disinii?</h3>
+
+          <p>
+            Kami menghadirkan teh berkualitas tinggi yang dipilih dengan cermat
+            dari sumber terbaik. Setiap daun teh kami diproses dengan penuh
+            perhatian untuk menjaga rasa, aroma, dan manfaat alaminya. Dengan
+            berbagai varian rasa yang autentik dan bahan alami yang menyehatkan,
+            kami berkomitmen untuk memberikan pengalaman minum teh yang
+            menyegarkan dan bermakna.
+          </p>
+          <p>
+            Dari kesejukan teh hijau hingga kehangatan teh herbal, setiap
+            cangkir yang kami sajikan adalah hasil dari dedikasi terhadap
+            kualitas, tradisi, dan inovasi. Pilih teh terbaik, pilih
+            kesempurnaan dalam setiap tegukan! 🍵✨
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- about end -->
+    <section id="contact" class="contact">
+      <h2><span>&lt;&lt;Kontak</span> Kami&gt;&gt;</h2>
+      <p>
+        Kami selalu siap mendengar dari Anda! Jika Anda memiliki pertanyaan,
+        saran, atau ingin bekerja sama dengan kami, jangan ragu untuk
+        menghubungi tim kami.
+      </p>
+
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.6100901374334!2d112.68376920000003!3d-7.617335000000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7d916c0e4610d%3A0xb1991bbfc2d38c09!2sCangkringmalang%2C%20Kepulungan%2C%20Kec.%20Gempol%2C%20Pasuruan%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1739680925139!5m2!1sid!2sid"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="maps"
+        ></iframe>
+        <form id="myform" action="">
+          <label for="">Hubungi Kami di:</label>
+
+          <div class="input-grup">
+            <i data-feather="user"></i>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Nama"
+              required
+            />
+          </div>
+
+          <div class="input-grup">
+            <i data-feather="mail"></i>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="E-mail"
+              required
+            />
+          </div>
+
+          <div class="input-grup">
+            <i data-feather="message-square"></i>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Tulis pesan..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="button" class="btn" id="submit" disabled>
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+    <!-- footer  -->
+    <footer>
+      <div class="brand">
+        <a>Merin<span>Tea</span></a>
+      </div>
+      <div class="social">
+        <a href="https://www.instagram.com/keepyys_?igsh=MWZvcDNkd2RjYjNuYQ=="
+          ><i data-feather="instagram"></i
+        ></a>
+        <a href="https://x.com/MerinTea"><i data-feather="twitter"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61573127763952"
+          ><i data-feather="facebook"></i
+        ></a>
+      </div>
+      <div class="credit">
+        <p>created by <a>moch. afrizal nur udin</a>. | &copy;2024.</p>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <script>
+      feather.replace();
+    </script>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
