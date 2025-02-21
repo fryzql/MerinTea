@@ -323,7 +323,7 @@ body {
   text-align: center;
   margin: 2rem;
   background-color: var(--fourth-color);
-  border-radius: 5%;
+  border-radius: 10px;
 }
 .menu .row .menu-card .menu-card-img {
   height: 200px;
@@ -331,12 +331,54 @@ body {
 }
 .menu .row .menu-card img {
   width: 100%;
-  border-radius: 5%;
+  border-radius: 10px;
+}
+.menu .row .menu-card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.menu .row .menu-card p span {
+  color: rgb(66, 66, 66);
+  font-size: 1rem;
+  text-decoration: line-through;
 }
 
 .menu .row .menu-card .menu-card-title {
   margin-top: 1.5rem auto 0.5rem;
   font-size: 2rem;
+}
+
+.menu .row .menu-card .cart-menu {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  margin-left: 2rem;
+}
+.menu .row .menu-card .cart-menu h4 {
+  font-size: 1rem;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  background-color: rgba(255, 255, 0, 0.5);
+  padding: 0.2rem;
+  border: 1px solid orange;
+  border-radius: 5px;
+}
+.menu .row .menu-card .cart-menu .star {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  /* fill: black; */
+}
+
+.menu .row .menu-card .add-cart {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 
 /* menu section end  */
@@ -410,6 +452,67 @@ body {
 }
 
 /* contact section end  */
+
+/* popup contact start  */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.popup {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 320px;
+  text-align: center;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.popup h2 {
+  font-size: 2rem;
+}
+
+.popup h2 span {
+  color: #85a947;
+}
+
+.popup p {
+  font-size: 1.3rem;
+  font-family: monospace;
+}
+
+.close-popup {
+  margin-top: 15px;
+  padding: 10px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Class Aktif */
+.overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay.active .popup {
+  transform: scale(1);
+}
+/* popup contact end  */
 
 /* footer start  */
 footer {

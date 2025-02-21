@@ -62,3 +62,26 @@ sendButton.addEventListener("click", function () {
     window.location.href = mailtoLink;
   }
 });
+
+// popup contact html
+
+const openPopup = document.querySelector(".btn");
+const closePopup = document.querySelector(".close-popup");
+const overlay = document.getElementById("popupOverlay");
+
+// Fungsi untuk membuka popup
+openPopup.addEventListener("click", () => {
+  overlay.classList.add("active");
+});
+
+// Fungsi untuk menutup popup
+closePopup.addEventListener("click", () => {
+  overlay.classList.remove("active");
+});
+
+// Klik di luar popup untuk menutup
+overlay.addEventListener("click", (e) => {
+  if (e.target === overlay) {
+    overlay.classList.remove("active");
+  }
+});
