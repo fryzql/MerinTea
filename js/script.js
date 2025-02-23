@@ -1,3 +1,5 @@
+// BURGER MENU --------------------------------------------------------
+
 // toggle class active burger menu
 const navbarNav = document.querySelector(".navbar-nav");
 
@@ -5,6 +7,8 @@ const navbarNav = document.querySelector(".navbar-nav");
 document.querySelector("#burger").onclick = () => {
   navbarNav.classList.toggle("active");
 };
+
+// SEARCH FORM --------------------------------------------------------
 
 // toggle class active search form
 
@@ -18,9 +22,23 @@ document.querySelector("#search-button").onclick = (e) => {
   e.preventDefault();
 };
 
+// SHOPPING CART -------------------------------------------------------
+
+// toggle class active cart
+
+const cart = document.querySelector(".shopping-cart");
+
+// ketika cart di click
+document.querySelector("#cart").onclick = () => {
+  cart.classList.toggle("active");
+};
+
+// HILANG NAVBAR ETC ---------------------------------------------------
+
 // Klik di luar sidebar untuk menghilangkan nav
 const hamburger = document.querySelector("#burger");
 const sb = document.querySelector("#search-button");
+const sc = document.querySelector("#cart");
 
 document.addEventListener("click", function (e) {
   if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
@@ -29,7 +47,12 @@ document.addEventListener("click", function (e) {
   if (!sb.contains(e.target) && !searchForm.contains(e.target)) {
     searchForm.classList.remove("active");
   }
+  if (!sc.contains(e.target) && !cart.contains(e.target)) {
+    cart.classList.remove("active");
+  }
 });
+
+// SUBMIT -------------------------------------------------------------
 
 // SUBMITBUTTON
 const form = document.getElementById("myform");
@@ -63,6 +86,8 @@ sendButton.addEventListener("click", function () {
   }
 });
 
+// POPUP CONTACT ------------------------------------------------------
+
 // popup contact html
 
 const openPopup = document.querySelector(".btn");
@@ -85,3 +110,13 @@ overlay.addEventListener("click", (e) => {
     overlay.classList.remove("active");
   }
 });
+
+// modal box
+
+const itemDetailModal = document.querySelector("#item-detail-modal");
+const itemDetailImage = document.querySelector(".detail");
+
+itemDetailImage.onclick = (e) => {
+  itemDetailModal.style.display = "flex";
+  e.preventDefault();
+};
